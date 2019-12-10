@@ -18,3 +18,33 @@ d = {'k1':[1,2,3,{'café':['Banana','mulher','colher',{'alvo':[1,2,3,"olá"]}]}]
 print(d)
 print("---------------------------++--------------------------------")
 print(d['k1'][3]['café'][3]['alvo'][3])
+
+
+print("---------------------------++--------------------------------")
+
+
+def dominio(email):
+    saida = email.split('@')[-1]    #[-1] pega a ultima
+    print(saida)
+    return saida
+
+dominio("matheus.lima@summit-bra.com")
+
+txt = "welcome to the jungle"
+x = txt.split()[0]
+print(x)
+
+
+def encontraCachorro(string):
+    return 'cachorro' in string.lower()
+
+print(encontraCachorro("existe um cachorro aqui?"))
+
+def contaCachorro(string):
+    count = 0
+    for palavra in string.lower().split():
+        if palavra == "cachorro":
+            count = count + 1
+    return count
+
+print(contaCachorro("cachorro é um cachorro muito cachorro"))
